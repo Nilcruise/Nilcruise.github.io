@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order page</title>
+    <link rel="stylesheet" href="../Verona/css/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin Sketch' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<body class="wrapper">
+    <header>
+        <img src="https://cdn.dribbble.com/users/542624/screenshots/11196922/media/f9645377f1f542a4bb32fab92beb5599.jpg" alt="pizzalogo" width="100px" height="100px">
+        <h1 class="title">VERONA FASTFOOD</h1>
+    </header>
+  <section class="s2">
+        <p class="formtitle">Verona order Form</p>
+        <p>Fill out the form below to order your food.</p>
+        <form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="post">
+			<input type="hidden" name="send_to" value="naiad.a96@gmail.com">
+			<fieldset>
+                <legend>Personal information</legend>
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" placeholder="First name">
+                    <label for="lastname"></label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Last name">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <label for="number"></label>
+                    <input type="tel" id="number" name="number" placeholder="Phone Number">       
+            </fieldset> 
+            <fieldset>
+                <legend>Your Order</legend>  
+                    <label for="date">Delivery Date:</label>
+                    <input type="date" id="date" name="date">
+                    <p>Delivery Time:</p>
+                    <label>
+                        <input type="radio" name="time" value="12:30pm">12:30 PM
+                        </label>
+                    <label>
+                        <input type="radio" name="time" value="1:15pm">1:15 PM
+                        </label> 
+                    <label>
+                        <input type="radio" name="time" value="7:30pm">7:30 PM
+                        </label>
+                    <label>
+                        <input type="radio" name="time" value="8:00pm">8:00 PM
+                        </label>
+                    <label>
+                        <input type="radio" name="time" value="9:00pm">9:00 PM
+                        </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="subscribe" value="subscribe" checked>Add me to your email list
+                        </label>
+            </fieldset>
+                    <button type="submit">Finalize The Order</button>
+        </form>        
+    </section>
+    <footer>
+        <p>copyright &copy;</p>
+    </footer>               
+</body>
+</html>
